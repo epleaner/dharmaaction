@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -19,4 +19,4 @@ module.exports = {
   },
   // eslint-disable-next-line global-require
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
-}
+};
