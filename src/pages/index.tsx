@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import Head from "next/head"
-import Link from "next/link"
+import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -95,15 +95,15 @@ export default function Home() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
 interface FeatureListProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 function FeatureList({ children }: FeatureListProps) {
-  return <ul className="px-12 py-12 space-y-5">{children}</ul>
+  return <ul className="px-12 py-12 space-y-5">{children}</ul>;
 }
 
 function Feature({ children, main }) {
@@ -116,7 +116,7 @@ function Feature({ children, main }) {
         <InfoText text={main} />
       </p>
     </li>
-  )
+  );
 }
 
 function InfoText({ text }) {
@@ -125,7 +125,7 @@ function InfoText({ text }) {
       <CheckIcon className="inline-flex flex-shrink-0 w-5 h-5 p-1 mr-3 text-gray-100 bg-blue-600 rounded-full sm:hidden" />
       {text}
     </span>
-  )
+  );
 }
 
 function CheckIcon(props) {
@@ -138,5 +138,5 @@ function CheckIcon(props) {
         d="M5 13l4 4L19 7"
       />
     </svg>
-  )
+  );
 }
