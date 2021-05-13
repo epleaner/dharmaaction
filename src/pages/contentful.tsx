@@ -1,25 +1,20 @@
-import { fetchEntries } from "@cms/contentful/pages";
-import Page from "@components/Page";
+import ContentfulPage from "@components/ContentfulPage";
+import ContentfulApi from "@utils/cms/contentful";
 
-const ContentfulPage = ({ pages }) => (
-  <div>
-    {pages.map(({ title }) => (
-      <Page key={title} title={title} />
-    ))}
-  </div>
-);
+const Contentful = ({ page }) => {
+  const { title, name, content } = page;
+
+  return <ContentfulPage key={name} {...{ title, name, content }} />;
+};
 
 export async function getStaticProps() {
-  const res = await fetchEntries();
-  const pages = await res.map((p) => {
-    return p.fields;
-  });
+  const { page } = await ContentfulApi.getPage("Home Page");
 
   return {
     props: {
-      pages,
+      page,
     },
   };
 }
 
-export default ContentfulPage;
+export default Contentful;
