@@ -23,7 +23,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="prose">
+        <body>
           <Main />
           <NextScript />
         </body>

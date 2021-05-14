@@ -30,12 +30,20 @@ export default class ContentfulApi {
           items {
             name
             title
-            content:contentSectionCollection {
+            content:contentCollection(limit: 10) {
               items {
                 ... on ContentSection {
                   title
                   body {
                     json
+                  }
+                }
+                ... on Image{
+                  title
+                  asset {
+                    url
+                    width
+                    height
                   }
                 }
               }
