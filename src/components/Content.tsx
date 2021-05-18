@@ -6,7 +6,7 @@ const Content = ({ title, body, asset }) => {
   if (body)
     return (
       <section>
-        <h3>{title}</h3>
+        <h3 className="dark:text-gray-200">{title}</h3>
         <ContentfulRichText json={body.json} />
       </section>
     );

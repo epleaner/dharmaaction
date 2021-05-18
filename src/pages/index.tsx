@@ -22,8 +22,8 @@ export default function Home({ page }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex justify-center min-h-screen py-20 bg-gradient-to-b from-gray-50 via-gray-50 to-gray-100">
-        <div className="prose">
+      <main className="flex justify-center min-h-screen py-20 bg-gradient-to-b from-gray-50 via-gray-50 to-gray-100 dark:from-gray-600 dark:via-gray-600 dark:to-gray-700">
+        <div>
           <ContentfulPage {...{ title, name, content }} />
         </div>
       </main>
