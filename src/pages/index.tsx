@@ -13,12 +13,6 @@ export default function Home({ page }) {
       <Head>
         <title>Dharma Action Network for Climate Engagement</title>
 
-        <meta
-          name="description"
-          content="Use tailwind css, eslint, prettier & absolute imports instantly.
-            Easily extendable zero-config template for pros and beginners."
-        />
-
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
