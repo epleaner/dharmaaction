@@ -1,4 +1,4 @@
-import Menu from "@components/Layout/Menu";
+import Menu from "@components/Shared/Layout/Menu";
 
 const index = ({ children }) => {
   return (

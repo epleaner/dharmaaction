@@ -4,7 +4,7 @@ import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 
-import Layout from "@components/Layout";
+import Layout from "@components/Shared/Layout";
 import SEO from "@seo/next-seo.config";
 
 import "@styles/tailwind.scss";

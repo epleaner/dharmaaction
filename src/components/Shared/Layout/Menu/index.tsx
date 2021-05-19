@@ -1,4 +1,4 @@
-import ThemeToggle from "@components/Layout/Menu/ThemeToggle";
+import ThemeToggle from "@components/Shared/Layout/Menu/ThemeToggle";
 
 const index = () => {
   return (
