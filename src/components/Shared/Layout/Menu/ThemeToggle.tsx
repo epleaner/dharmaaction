@@ -1,19 +1,26 @@
+import { useCallback } from "react";
+
 import { useTheme } from "next-themes";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
+  const toggleTheme = useCallback(
+    () => setTheme(theme === "dark" ? "light" : "dark"),
+    [setTheme, theme]
+  );
+
   return (
-    <label aria-label="Toggle Dark Mode">
-      Dark mode?
-      <input
-        className="ml-4"
-        type="checkbox"
-        name="Dark mode"
-        checked={theme === "dark"}
-        onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-      />
-    </label>
+    <span
+      className="hover:cursor-pointer"
+      aria-label="Toggle Dark Mode"
+      onClick={toggleTheme}
+      onKeyDown={toggleTheme}
+      role="button"
+      tabIndex={0}
+    >
+      {theme === "light" ? "🌝" : "🌚"}
+    </span>
   );
 };
 
