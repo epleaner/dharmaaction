@@ -24,14 +24,14 @@ const Menu = () => {
       role="navigation"
       className="w-full bg-gray-50 dark:bg-gray-600 dark:text-gray-200"
     >
-      <div className="flex items-center justify-between py-4 mx-10">
+      <div className="flex items-center justify-between py-4 mx-4 md:mx-10">
         <ActiveLink href="/" label="DANCE" />
         <div className="hidden md:block">{links}</div>
         <div className="flex items-center">
           <ThemeToggle />
           <div className="md:hidden">
             <button
-              className="flex items-center p-2 mx-6 transition-colors hover:text-green-600"
+              className="flex items-center p-2 ml-6 transition-colors hover:text-green-600"
               type="button"
               onClick={() => setShowMenu((s) => !s)}
             >
