@@ -1,3 +1,4 @@
+import Footer from "@components/Shared/Layout/Footer";
 import Menu from "@components/Shared/Layout/Menu";
 
 const index = ({ children }) => {
@@ -5,6 +6,7 @@ const index = ({ children }) => {
     <div>
       <Menu />
       {children}
+      <Footer />
     </div>
   );
 };
