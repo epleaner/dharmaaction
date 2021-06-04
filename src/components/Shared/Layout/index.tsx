@@ -5,7 +5,9 @@ const index = ({ children }) => {
   return (
     <div>
       <Menu />
-      {children}
+      <main className="flex justify-center min-h-screen px-4 py-12 bg-gradient-to-b from-gray-50 via-gray-50 to-gray-100 dark:from-gray-600 dark:via-gray-600 dark:to-gray-700">
+        {children}
+      </main>
       <Footer />
     </div>
   );
