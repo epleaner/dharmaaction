@@ -5,9 +5,8 @@ import Link from "next/link";
 import date from "@utils/date";
 
 const EventSummary = ({ title, startDate, endDate, subHeading, location }) => {
-  console.log(title, title.toLowerCase());
   const href = useMemo(
-    () => `events/${title.toLowerCase().replaceAll(" ", "-")}`,
+    () => `events/${title.toLowerCase().replace(/\w/, "-")}`,
     [title]
   );
 
