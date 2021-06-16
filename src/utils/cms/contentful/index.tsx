@@ -127,7 +127,7 @@ export default class ContentfulApi {
 
       const { eventCollection } = await this.gql(`
       {
-        eventCollection(where: {title: "${titleCased}"}) {
+        eventCollection(where: {title_contains: "${titleCased}"}) {
           items {
             title
             startDate

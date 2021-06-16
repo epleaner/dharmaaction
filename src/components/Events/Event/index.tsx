@@ -1,9 +1,9 @@
 import React from "react";
 
-import dayjs from "dayjs";
 import Link from "next/link";
 
 import ContentfulRichText from "@components/Shared/ContentfulRichText";
+import date from "@utils/date";
 
 const Event = ({
   title,
@@ -23,21 +23,19 @@ const Event = ({
       </aside>
       <h1>{title}</h1>
       <h2>{subHeading}</h2>
-      <p>
-        {dayjs(startDate).format("DD/MM/YYYY")} -{" "}
-        {dayjs(endDate).format("DD/MM/YYYY")}
-      </p>
+      <p>{date.localDateRange(startDate, endDate)}</p>
       <p>{location}</p>
       <section>{body && <ContentfulRichText json={body.json} />}</section>
-      {imagesCollection.items.map((i) => (
-        <img
-          key={i.title}
-          src={i.url}
-          alt={i.title}
-          width={i.width}
-          height={i.height}
-        />
-      ))}
+      {imagesCollection &&
+        imagesCollection.items.map((i) => (
+          <img
+            key={i.title}
+            src={i.url}
+            alt={i.title}
+            width={i.width}
+            height={i.height}
+          />
+        ))}
     </article>
   );
 };

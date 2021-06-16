@@ -9,7 +9,6 @@ export default function EventsPage({ event }) {
 
 export async function getStaticProps({ params }) {
   const { title } = params;
-
   const { event } = await ContentfulApi.getEvent({ title });
 
   return {

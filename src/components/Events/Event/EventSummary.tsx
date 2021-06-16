@@ -1,13 +1,15 @@
 import { useMemo } from "react";
 
-import dayjs from "dayjs";
 import Link from "next/link";
+
+import date from "@utils/date";
 
 const EventSummary = ({ title, startDate, endDate, subHeading, location }) => {
   const href = useMemo(
     () => `events/${title.toLowerCase().replaceAll(" ", "-")}`,
     [title]
   );
+
   return (
     <article className="prose">
       <Link {...{ href }}>
@@ -16,10 +18,7 @@ const EventSummary = ({ title, startDate, endDate, subHeading, location }) => {
         </a>
       </Link>
       <h3>{subHeading}</h3>
-      <p>
-        {dayjs(startDate).format("DD/MM/YYYY")} -{" "}
-        {dayjs(endDate).format("DD/MM/YYYY")}
-      </p>
+      <p>{date.localDateRange(startDate, endDate)}</p>
       <p>{location}</p>
     </article>
   );
