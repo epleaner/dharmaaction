@@ -122,7 +122,7 @@ export default class ContentfulApi {
   static async getEvent({ title }) {
     try {
       const titleCased = title
-        .replace(/\w/, "-")
+        .replace(/\s+/g, "-")
         .replace(/(^\w{1})|(\s+\w{1})/g, (t) => t.toUpperCase());
 
       const { eventCollection } = await this.gql(`

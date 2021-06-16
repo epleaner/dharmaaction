@@ -5,14 +5,13 @@ import Link from "next/link";
 import date from "@utils/date";
 
 const EventSummary = ({ title, startDate, endDate, subHeading, location }) => {
-  const href = useMemo(
-    () => `events/${title.toLowerCase().replace(/\w/, "-")}`,
-    [title]
-  );
+  const url = useMemo(() => `${title.toLowerCase().replace(/\s+/g, "-")}`, [
+    title,
+  ]);
 
   return (
     <article className="prose">
-      <Link {...{ href }}>
+      <Link href={`/events/${url}`}>
         <a>
           <h2>{title}</h2>
         </a>
