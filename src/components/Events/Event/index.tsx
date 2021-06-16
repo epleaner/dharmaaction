@@ -28,9 +28,7 @@ const Event = ({
         {dayjs(endDate).format("DD/MM/YYYY")}
       </p>
       <p>{location}</p>
-      <section>
-        <ContentfulRichText json={body.json} />
-      </section>
+      <section>{body && <ContentfulRichText json={body.json} />}</section>
       {imagesCollection.items.map((i) => (
         <img
           key={i.title}
