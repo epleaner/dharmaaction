@@ -1,15 +1,41 @@
-import React from "react";
+import { useCallback, useRef, useState } from "react";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
+  const formRef = useRef();
+  const handleSubmit = useCallback(async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const formData = new FormData(formRef.current);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      console.log("Form successfully submitted");
+    } catch (error) {
+      console.log(error);
+    }
+    setLoading(false);
+  }, []);
+
   return (
     <div className="prose">
       <h1>Contact</h1>
       <form
+        ref={formRef}
         name="contact"
         method="POST"
         data-netlify="true"
         netlify-honeypot="honey-field"
         data-netlify-recaptcha="true"
+        onSubmit={handleSubmit}
       >
         <div className="">
           <label className="dark:text-gray-200">Name</label>
@@ -37,6 +63,7 @@ const Contact = () => {
           <div data-netlify-recaptcha="true" />
           <button
             type="submit"
+            disabled={loading}
             className="px-6 py-2 text-gray-100 transition-colors bg-blue-500 rounded hover:bg-blue-600"
           >
             Send
