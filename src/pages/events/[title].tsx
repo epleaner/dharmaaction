@@ -4,12 +4,12 @@ import Event from "@components/Events/Event";
 import ContentfulApi from "@utils/cms/contentful";
 
 export default function EventsPage({ event }) {
-  return <Event {...event} />;
+  return <Event {...{ event }} />;
 }
 
 export async function getStaticProps({ params }) {
   const { title } = params;
-  const { event } = await ContentfulApi.getEvent({ title });
+  const { event = null } = await ContentfulApi.getEvent({ title });
 
   return {
     props: {

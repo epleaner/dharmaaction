@@ -1,7 +1,7 @@
 import React from "react";
 
 import Content from "@components/Content";
-import NotFound from "@components/NotFound";
+import NotFound from "@components/Shared/NotFound";
 
 const Page = ({ name, title: pageTitle, content }) => {
   if (name === "404") return <NotFound />;
