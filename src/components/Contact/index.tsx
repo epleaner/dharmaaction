@@ -4,15 +4,43 @@ const Contact = () => {
   return (
     <div className="prose">
       <h1>Contact</h1>
-      <form name="contact" method="POST" data-netlify="true">
-        <div className="grid grid-cols-2 gap-4">
-          <label>Name:</label>
-          <input type="text" name="name" />
-          <label>Email:</label>
-          <input type="email" name="email" />
-          <label>Message:</label>
-          <textarea name="message" />
-          <button type="submit">Send</button>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="honey-field"
+        data-netlify-recaptcha="true"
+      >
+        <div className="">
+          <label className="dark:text-gray-200">Name</label>
+          <input
+            type="text"
+            name="name"
+            className="relative w-full px-3 py-3 mt-1 mb-4 text-sm bg-white border-0 rounded shadow-sm outline-none dark:bg-gray-400 focus:outline-none focus:ring-2"
+          />
+          <label className="dark:text-gray-200">Email</label>
+          <input
+            type="text"
+            name="email"
+            className="relative w-full px-3 py-3 mt-1 mb-4 text-sm bg-white border-0 rounded shadow-sm outline-none dark:bg-gray-400 focus:outline-none focus:ring-2"
+          />
+          <label className="dark:text-gray-200">Message</label>
+          <textarea
+            name="message"
+            className="relative w-full px-3 py-3 mt-1 mb-6 text-sm bg-white border-0 rounded shadow-sm outline-none dark:bg-gray-400 focus:outline-none focus:ring-2"
+          />
+          <p className="hidden">
+            <label className="dark:text-gray-200">
+              Don’t fill this out if you’re human: <input name="honey-field" />
+            </label>
+          </p>
+          <div data-netlify-recaptcha="true" />
+          <button
+            type="submit"
+            className="px-6 py-2 text-gray-100 transition-colors bg-blue-500 rounded hover:bg-blue-600"
+          >
+            Send
+          </button>
         </div>
       </form>
     </div>
