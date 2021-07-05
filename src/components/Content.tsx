@@ -3,7 +3,6 @@ import React from "react";
 import ContentfulRichText from "@components/Shared/ContentfulRichText";
 
 const Content = ({ title, hideTitle, body, asset }) => {
-  console.log(hideTitle);
   if (body)
     return (
       <section>
