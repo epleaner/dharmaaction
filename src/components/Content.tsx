@@ -2,11 +2,12 @@ import React from "react";
 
 import ContentfulRichText from "@components/Shared/ContentfulRichText";
 
-const Content = ({ title, body, asset }) => {
+const Content = ({ title, hideTitle, body, asset }) => {
+  console.log(hideTitle);
   if (body)
     return (
       <section>
-        <h3 className="dark:text-gray-200">{title}</h3>
+        {!hideTitle && <h3 className="dark:text-gray-200">{title}</h3>}
         <ContentfulRichText json={body.json} />
       </section>
     );

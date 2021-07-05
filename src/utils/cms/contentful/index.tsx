@@ -36,6 +36,7 @@ export default class ContentfulApi {
               items {
                 ... on ContentSection {
                   title
+                  hideTitle
                   body {
                     json
                   }
