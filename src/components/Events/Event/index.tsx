@@ -45,7 +45,7 @@ const Event = ({ event }) => {
     <article className="prose">
       <aside className="mb-10">
         <Link href="/events">
-          <a>Back to All Events</a>
+          <a>Back to all events</a>
         </Link>
       </aside>
       {content}

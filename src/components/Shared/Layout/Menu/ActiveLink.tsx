@@ -9,7 +9,7 @@ const ActiveLink = ({ href, label, ...otherProps }) => {
       <Link {...{ href }}>
         <a
           className={`transition-colors hover:text-green-600 ${
-            router.asPath === href ? "text-green-600" : ""
+            router.asPath.includes(href) ? "text-green-600" : ""
           } `}
         >
           {label}

@@ -1,10 +1,10 @@
 import React from "react";
 
-import ContentfulPage from "@components/ContentfulPage";
+import LocalGroup from "@components/LocalGroups/LocalGroup";
 import ContentfulApi from "@utils/cms/contentful";
 
 export default function LocalGroupPage({ page }) {
-  return <ContentfulPage {...page} />;
+  return <LocalGroup {...page} />;
 }
 
 export async function getStaticProps() {
