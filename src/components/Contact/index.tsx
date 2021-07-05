@@ -15,7 +15,7 @@ const Contact = () => {
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       console.log("Form successfully submitted");
