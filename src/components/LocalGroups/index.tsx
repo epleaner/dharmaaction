@@ -3,8 +3,8 @@ import Link from "next/link";
 const LocalGroups = () => {
   return (
     <div className="grid prose">
-      <section className=" dark:text-gray-200 prose-green">
-        <h1 className="dark:text-gray-200">Local Groups</h1>
+      <section className="">
+        <h1>Local Groups</h1>
         <p>Interested in finding a DANCE group close to you?</p>
         <ul>
           <li>

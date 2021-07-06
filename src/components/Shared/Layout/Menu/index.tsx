@@ -8,7 +8,7 @@ const Menu = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const links = (
-    <ul className="absolute flex flex-col items-end w-screen h-screen px-10 md:px-0 md:flex-row md:static md:h-auto md:w-auto md:bg-none bg-gray-50 dark:bg-gray-600">
+    <ul className="absolute flex flex-col items-end w-screen h-screen px-10 bg-gray-50 dark:bg-gray-600 md:px-0 md:flex-row md:static md:h-auto md:w-auto md:bg-transparent md:dark:bg-transparent">
       <NavItem href="/events" label="Events" />
       <NavItem href="/local-groups" label="Local Groups" />
       <NavItem href="/newsletters" label="Newsletters" />
@@ -22,16 +22,16 @@ const Menu = () => {
   return (
     <nav
       role="navigation"
-      className="w-full bg-gray-50 dark:bg-gray-600 dark:text-gray-200"
+      className="absolute w-full bg-gray-50 dark:bg-gray-600 md:bg-transparent md:dark:bg-transparent"
     >
       <div className="flex items-center justify-between py-4 mx-4 md:mx-10">
-        <ActiveLink href="/" label="DANCE" />
+        <ActiveLink showActive={false} href="/" label="DANCE" />
         <div className="hidden md:block">{links}</div>
         <div className="flex items-center">
           <ThemeToggle />
           <div className="md:hidden">
             <button
-              className="flex items-center p-2 ml-6 transition-colors hover:text-green-600"
+              className="flex items-center p-2 ml-6 link"
               type="button"
               onClick={() => setShowMenu((s) => !s)}
             >

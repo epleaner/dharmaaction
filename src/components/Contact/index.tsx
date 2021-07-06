@@ -26,7 +26,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="prose">
+    <div className="prose dark:prose-dark">
       <h1>Contact</h1>
       <form
         ref={formRef}
@@ -37,35 +37,20 @@ const Contact = () => {
         data-netlify-recaptcha="true"
         onSubmit={handleSubmit}
       >
-        <div className="">
-          <label className="dark:text-gray-200">Name</label>
-          <input
-            type="text"
-            name="name"
-            className="relative w-full p-3 mt-1 mb-4 text-sm bg-white border-0 rounded shadow-sm outline-none dark:bg-gray-400 focus:outline-none focus:ring-2"
-          />
-          <label className="dark:text-gray-200">Email</label>
-          <input
-            type="text"
-            name="email"
-            className="relative w-full p-3 mt-1 mb-4 text-sm bg-white border-0 rounded shadow-sm outline-none dark:bg-gray-400 focus:outline-none focus:ring-2"
-          />
-          <label className="dark:text-gray-200">Message</label>
-          <textarea
-            name="message"
-            className="relative w-full p-3 mt-1 mb-10 text-sm bg-white border-0 rounded shadow-sm outline-none dark:bg-gray-400 focus:outline-none focus:ring-2"
-          />
+        <div>
+          <label>Name</label>
+          <input type="text" name="name" className="input" />
+          <label>Email</label>
+          <input type="text" name="email" className="input" />
+          <label>Message</label>
+          <textarea name="message" className="input" />
           <p className="hidden">
-            <label className="dark:text-gray-200">
+            <label>
               Don’t fill this out if you’re human: <input name="honey-field" />
             </label>
           </p>
           <div data-netlify-recaptcha="true" />
-          <button
-            type="submit"
-            disabled={loading}
-            className="px-6 py-2 text-gray-100 transition-colors bg-blue-500 rounded hover:bg-blue-600"
-          >
+          <button type="submit" disabled={loading} className="mt-6 button">
             Send
           </button>
         </div>

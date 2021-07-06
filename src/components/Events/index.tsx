@@ -27,12 +27,12 @@ const Events = ({ events }) => {
 
   return (
     <div className="grid prose">
-      <section className=" dark:text-gray-200 prose-green">
-        <h1 className="dark:text-gray-200">Upcoming Events</h1>
+      <section className="">
+        <h1>Upcoming Events</h1>
         {upcomingEvents}
       </section>
-      <section className="prose dark:text-gray-200 prose-green">
-        <h1 className="dark:text-gray-200">Past Events</h1>
+      <section className="prose ">
+        <h1>Past Events</h1>
         {pastEvents}
       </section>
     </div>

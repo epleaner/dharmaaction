@@ -6,7 +6,7 @@ const Content = ({ title, hideTitle, body, asset }) => {
   if (body)
     return (
       <section>
-        {!hideTitle && <h3 className="dark:text-gray-200">{title}</h3>}
+        {!hideTitle && <h3>{title}</h3>}
         <ContentfulRichText json={body.json} />
       </section>
     );

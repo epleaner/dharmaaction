@@ -1,6 +1,7 @@
 import { useCallback, useState, useEffect } from "react";
 
 import { useTheme } from "next-themes";
+import nightwind from "nightwind/helper";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -9,10 +10,10 @@ const ThemeToggle = () => {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
-  const toggleTheme = useCallback(
-    () => setTheme(theme === "dark" ? "light" : "dark"),
-    [setTheme, theme]
-  );
+  const toggleTheme = useCallback(() => {
+    nightwind.beforeTransition();
+    setTheme(theme === "dark" ? "light" : "dark");
+  }, [setTheme, theme]);
 
   if (!mounted) return null;
 
@@ -21,7 +22,7 @@ const ThemeToggle = () => {
       className="hover:cursor-pointer"
       aria-label="Toggle Dark Mode"
       onClick={toggleTheme}
-      onKeyDown={toggleTheme}
+      onKeyPress={toggleTheme}
       role="button"
       tabIndex={0}
     >
