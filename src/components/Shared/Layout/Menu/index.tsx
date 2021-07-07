@@ -26,24 +26,26 @@ const Menu = () => {
     >
       <div className="flex items-center justify-between py-4 mx-4 md:mx-10">
         <ActiveLink showActive={false} href="/" label="DANCE" />
-        <div className="hidden md:block">{links}</div>
-        <div className="flex items-center">
-          <ThemeToggle />
-          <div className="md:hidden">
-            <button
-              className="flex items-center p-2 ml-6 link"
-              type="button"
-              onClick={() => setShowMenu((s) => !s)}
-            >
-              <svg
-                className="w-3 h-3 fill-current "
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+        <div className="flex">
+          <div className="hidden pr-10 md:block">{links}</div>
+          <div className="flex items-center">
+            <ThemeToggle />
+            <div className="md:hidden">
+              <button
+                className="flex items-center p-2 ml-6 link"
+                type="button"
+                onClick={() => setShowMenu((s) => !s)}
               >
-                <title>Menu</title>
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-            </button>
+                <svg
+                  className="w-3 h-3 fill-current "
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
