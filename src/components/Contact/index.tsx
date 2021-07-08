@@ -1,21 +1,24 @@
-import { useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 
 export default function ContactForm() {
+  const [submitting, setSubmitting] = useState(false);
   const formRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
     const myForm = formRef.current;
     const formData = new FormData(myForm);
 
+    setSubmitting(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData as any).toString(),
     })
       .then(() => console.log("Form successfully submitted"))
-      .catch((error) => console.log("There was an error", error));
-  };
+      .catch((error) => console.log("There was an error", error))
+      .finally(() => setSubmitting(false));
+  }, []);
 
   return (
     <div className="prose">
@@ -41,7 +44,7 @@ export default function ContactForm() {
             </label>
           </p>
           <div data-netlify-recaptcha="true" />
-          <button type="submit" className="mt-6 button">
+          <button type="submit" className="mt-6 button" disabled={submitting}>
             Send
           </button>
         </div>
