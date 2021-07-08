@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Image from "next/image";
+
 import ActiveLink from "@components/Shared/Layout/Menu/ActiveLink";
 import NavItem from "@components/Shared/Layout/Menu/NavItem";
 import ThemeToggle from "@components/Shared/Layout/Menu/ThemeToggle";
@@ -25,7 +27,15 @@ const Menu = () => {
       className="absolute w-full bg-gray-50 dark:bg-gray-600 md:bg-transparent md:dark:bg-transparent"
     >
       <div className="flex items-center justify-between py-4 mx-4 md:mx-10">
-        <ActiveLink showActive={false} href="/" label="DANCE" />
+        <div className="grid items-center grid-cols-2 gap-6">
+          <Image
+            src="/assets/earth_color.svg"
+            alt="Hands holding the Earth"
+            width="64"
+            height="64"
+          />
+          <ActiveLink showActive={false} href="/" label="DANCE" />
+        </div>
         <div className="flex">
           <div className="hidden pr-10 md:block">{links}</div>
           <div className="flex items-center">
