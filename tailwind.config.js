@@ -24,6 +24,44 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        earthGreen: {
+          50: "#e1f5d9",
+          100: "#caedbc",
+          200: "#b3e59f",
+          300: "#a1ce8f",
+          400: "#86ac77",
+          500: "#6b895f",
+          600: "#58704e",
+          700: "#4f6546",
+          800: "#42543b",
+          900: "#35432f",
+        },
+        earthBlue: {
+          50: "#d8e8fd",
+          100: "#bad7fc",
+          200: "#9dc6fb",
+          300: "#8db2e2",
+          400: "#7695bc",
+          500: "#5e7797",
+          600: "#4d617b",
+          700: "#45576f",
+          800: "#3a495c",
+          900: "#2e3a4a",
+        },
+        earthTan: {
+          50: "#f9ecdb",
+          100: "#f5debf",
+          200: "#f1d0a4",
+          300: "#d9bb94",
+          400: "#b59c7b",
+          500: "#917d62",
+          600: "#766650",
+          700: "#6a5c48",
+          800: "#594d3c",
+          900: "#473d30",
+        },
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

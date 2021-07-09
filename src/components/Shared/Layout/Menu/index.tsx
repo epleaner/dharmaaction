@@ -29,7 +29,7 @@ const Menu = () => {
       <div className="flex items-center justify-between py-4 mx-4 md:mx-10">
         <div className="grid items-center grid-cols-2 gap-6">
           <Image
-            src="/assets/earth_color.svg"
+            src="/assets/earth_color_copy.svg"
             alt="Hands holding the Earth"
             width="64"
             height="64"
