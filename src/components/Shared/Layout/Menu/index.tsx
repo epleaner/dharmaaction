@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import Image from "next/image";
-
+import EarthLogoSvg from "@components/Assets/EarthLogoSvg";
 import ActiveLink from "@components/Shared/Layout/Menu/ActiveLink";
 import NavItem from "@components/Shared/Layout/Menu/NavItem";
 import ThemeToggle from "@components/Shared/Layout/Menu/ThemeToggle";
@@ -26,14 +25,9 @@ const Menu = () => {
       role="navigation"
       className="absolute w-full bg-gray-50 dark:bg-gray-600 md:bg-transparent md:dark:bg-transparent"
     >
-      <div className="flex items-center justify-between py-4 mx-4 md:mx-10">
+      <div className="flex items-center justify-between pt-4 mx-4 md:mx-10">
         <div className="grid items-center grid-cols-2 gap-6">
-          <Image
-            src="/assets/earth_color_copy.svg"
-            alt="Hands holding the Earth"
-            width="64"
-            height="64"
-          />
+          <EarthLogoSvg />
           <ActiveLink showActive={false} href="/" label="DANCE" />
         </div>
         <div className="flex">
