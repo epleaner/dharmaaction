@@ -9,7 +9,7 @@ const Menu = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const links = (
-    <ul className="absolute flex flex-col items-end w-screen h-screen px-10 bg-gray-50 dark:bg-gray-600 md:px-0 md:flex-row md:static md:h-auto md:w-auto md:bg-transparent md:dark:bg-transparent">
+    <ul className="absolute flex flex-col items-end w-screen h-screen px-10 bg-gray-50 dark:bg-gray-600 lg:px-0 lg:flex-row lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:dark:bg-transparent">
       <NavItem href="/events" label="Events" />
       <NavItem href="/local-groups" label="Local Groups" />
       <NavItem href="/newsletters" label="Newsletters" />
@@ -23,18 +23,18 @@ const Menu = () => {
   return (
     <nav
       role="navigation"
-      className="absolute w-full bg-gray-50 dark:bg-gray-600 md:bg-transparent md:dark:bg-transparent"
+      className="absolute w-full bg-gray-50 dark:bg-gray-600 lg:bg-transparent lg:dark:bg-transparent"
     >
-      <div className="flex items-center justify-between pt-4 mx-4 md:mx-10">
-        <div className="grid items-center grid-cols-2 gap-6">
-          <EarthLogoSvg />
-          <ActiveLink showActive={false} href="/" label="DANCE" />
+      <div className="flex items-center justify-between pt-4 mx-4 lg:mx-10">
+        <div className="flex items-center">
+          <div className="mr-6" />
+          <ActiveLink showActive={false} href="/" label={<EarthLogoSvg />} />
         </div>
         <div className="flex">
-          <div className="hidden pr-10 md:block">{links}</div>
+          <div className="hidden pr-10 lg:block">{links}</div>
           <div className="flex items-center">
             <ThemeToggle />
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 className="flex items-center p-2 ml-6 link"
                 type="button"
@@ -53,7 +53,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-      <div className={`md:hidden ${!showMenu && "hidden"}`}>{links}</div>
+      <div className={`lg:hidden ${!showMenu && "hidden"}`}>{links}</div>
     </nav>
   );
 };

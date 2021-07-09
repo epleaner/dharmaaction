@@ -1,6 +1,9 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  variants: {
+    extend: { transitionProperty: ["group-hover"] },
+  },
   mode: "jit",
   purge: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -79,9 +82,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     /* eslint-disable global-require */
