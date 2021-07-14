@@ -5,23 +5,32 @@ import { ThemeProvider } from "next-themes";
 import { AppProps } from "next/app";
 
 import Layout from "@components/Shared/Layout";
+import LandingLayout from "@components/Shared/Layout/LandingLayout";
 import SEO from "@seo/next-seo.config";
 
 import "@styles/tailwind.scss";
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
-  <>
-    <DefaultSeo {...SEO} />
-    <ThemeProvider
-      attribute="class"
-      storageKey="nightwind-mode"
-      defaultTheme="system" // default "light"
-    >
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
-  </>
-);
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+  return (
+    <>
+      <DefaultSeo {...SEO} />
+      <ThemeProvider
+        attribute="class"
+        storageKey="nightwind-mode"
+        defaultTheme="system" // default "light"
+      >
+        {Component.name === "Home" ? (
+          <LandingLayout>
+            <Component {...pageProps} />
+          </LandingLayout>
+        ) : (
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        )}
+      </ThemeProvider>
+    </>
+  );
+};
 
 export default MyApp;

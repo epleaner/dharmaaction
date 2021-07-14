@@ -1,12 +1,12 @@
 import React from "react";
 
-import ContentfulPage from "@components/ContentfulPage";
+import LandingPage from "@components/LandingPage";
 import ContentfulApi from "@utils/cms/contentful";
 
 export default function Home({ page }) {
   const { title, name, content } = page;
 
-  return <ContentfulPage {...{ title, name, content }} />;
+  return <LandingPage {...{ title, name, content }} />;
 }
 
 export async function getStaticProps() {

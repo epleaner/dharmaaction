@@ -12,7 +12,8 @@
     "format": "prettier --write .",
     "lint": "eslint src --fix",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "clean": "rm -rf .next"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [

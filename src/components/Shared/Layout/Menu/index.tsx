@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import EarthLogoSvg from "@components/Assets/EarthLogoSvg";
 import ActiveLink from "@components/Shared/Layout/Menu/ActiveLink";
 import NavItem from "@components/Shared/Layout/Menu/NavItem";
 import ThemeToggle from "@components/Shared/Layout/Menu/ThemeToggle";
@@ -25,10 +24,13 @@ const Menu = () => {
       role="navigation"
       className="absolute w-full bg-gray-50 dark:bg-gray-600 lg:bg-transparent lg:dark:bg-transparent"
     >
-      <div className="flex items-center justify-between pt-4 mx-4 lg:mx-10">
+      <div className="flex items-center justify-between pt-10 mx-4 lg:mx-10">
         <div className="flex items-center">
-          <div className="mr-6" />
-          <ActiveLink showActive={false} href="/" label={<EarthLogoSvg />} />
+          <ActiveLink
+            showActive={false}
+            href="/"
+            label="Dharma Action Network for Climate Engagement"
+          />
         </div>
         <div className="flex">
           <div className="hidden pr-10 lg:block">{links}</div>

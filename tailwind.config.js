@@ -25,8 +25,11 @@ module.exports = {
     }),
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Almarai", ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: () => ({
+        hero: "url('public/assets/mineral.jpg')",
+      }),
       colors: {
         earthGreen: {
           50: "#e1f5d9",
