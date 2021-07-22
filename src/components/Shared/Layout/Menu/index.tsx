@@ -14,10 +14,7 @@ const Menu = () => {
   );
 
   return (
-    <nav
-      role="navigation"
-      className="absolute w-full bg-gray-50 dark:bg-gray-600 lg:bg-transparent lg:dark:bg-transparent"
-    >
+    <nav role="navigation" className="absolute w-full">
       <div className="flex items-center justify-between pt-10 mx-4 lg:mx-10">
         <div className="flex items-center">
           <ActiveLink
