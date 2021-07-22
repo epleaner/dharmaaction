@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import ActiveLink from "@components/Shared/Layout/Menu/ActiveLink";
-import NavItem from "@components/Shared/Layout/Menu/NavItem";
+import Links from "@components/Shared/Layout/Menu/Links";
 import ThemeToggle from "@components/Shared/Layout/Menu/ThemeToggle";
 
 const Menu = () => {
@@ -9,13 +9,7 @@ const Menu = () => {
 
   const links = (
     <ul className="absolute flex flex-col items-end w-screen h-screen px-10 bg-gray-50 dark:bg-gray-600 lg:px-0 lg:flex-row lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:dark:bg-transparent">
-      <NavItem href="/events" label="Events" />
-      <NavItem href="/local-groups" label="Local Groups" />
-      <NavItem href="/newsletters" label="Newsletters" />
-      <NavItem href="/projects" label="Projects" />
-      <NavItem href="/resources" label="Resources" />
-      <NavItem href="/contact" label="Contact" />
-      <NavItem href="/mailing-list" label="Mailing List" />
+      <Links />
     </ul>
   );
 

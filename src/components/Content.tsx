@@ -5,8 +5,8 @@ import ContentfulRichText from "@components/Shared/ContentfulRichText";
 const Content = ({ title, hideTitle, body, asset }) => {
   if (body)
     return (
-      <section>
-        {!hideTitle && <h3>{title}</h3>}
+      <section className="pb-10">
+        {!hideTitle && <h1>{title}</h1>}
         <ContentfulRichText json={body.json} />
       </section>
     );

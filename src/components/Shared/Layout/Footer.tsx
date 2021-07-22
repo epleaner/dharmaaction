@@ -2,7 +2,7 @@ import { Facebook } from "@components/Shared/Icons";
 
 const Footer = () => {
   return (
-    <footer className="grid w-full grid-rows-3 gap-2 p-4 text-sm bg-gray-100 dark:bg-gray-700">
+    <footer className="grid w-full grid-rows-3 gap-2 p-4 text-sm bg-gray-100 lg:p-10 dark:bg-gray-700">
       <a
         className="w-6 prose hover:text-green-600"
         href="https://www.facebook.com/groups/DharmaActionNetworkforClimateEngagement"

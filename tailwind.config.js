@@ -29,6 +29,7 @@ module.exports = {
       },
       backgroundImage: () => ({
         hero: "url('public/assets/mineral.jpg')",
+        himalGlow: "url('public/assets/himal_glow.jpg')",
       }),
       colors: {
         earthGreen: {
