@@ -39,6 +39,7 @@ export default class ContentfulApi {
                 ... on ContentSection {
                   title
                   hideTitle
+                  alignment
                   body {
                     json
                   }

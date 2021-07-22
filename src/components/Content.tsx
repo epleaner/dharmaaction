@@ -2,17 +2,11 @@ import React from "react";
 
 import ContentfulRichText from "@components/Shared/ContentfulRichText";
 
-const Content = ({ title, hideTitle, body, asset }) => {
-  if (body)
-    return (
-      <section className="pb-10">
-        {!hideTitle && <h1>{title}</h1>}
-        <ContentfulRichText json={body.json} />
-      </section>
-    );
+const Content = ({ title, hideTitle, alignment = "left", body, asset }) => {
+  let content;
 
-  if (asset) {
-    return (
+  if (asset)
+    content = (
       <img
         src={asset.url}
         alt={title}
@@ -20,8 +14,19 @@ const Content = ({ title, hideTitle, body, asset }) => {
         height={asset.height}
       />
     );
-  }
-  return null;
+  else
+    content = (
+      <section className="pb-10">
+        {!hideTitle && <h1>{title}</h1>}
+        {body && <ContentfulRichText json={body.json} />}
+      </section>
+    );
+
+  let align = "justify-left text-left";
+  if (alignment === "center") align = "justify-center text-center";
+  if (alignment === "right") align = "justify-end text-right";
+
+  return <div className={`flex ${align}`}>{content}</div>;
 };
 
 export default Content;
