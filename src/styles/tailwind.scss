@@ -11,6 +11,10 @@
     @apply antialiased;
   }
 
+  body {
+    @apply bg-mineral bg-auto md:bg-contain;
+  }
+
   a,
   .link {
     @apply transition-colors hover:text-green-600;

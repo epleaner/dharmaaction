@@ -28,7 +28,7 @@ module.exports = {
         sans: ["Almarai", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: () => ({
-        hero: "url('public/assets/mineral.jpg')",
+        mineral: "url('public/assets/mineral.jpg')",
         himalGlow: "url('public/assets/himal_glow.jpg')",
       }),
       colors: {
