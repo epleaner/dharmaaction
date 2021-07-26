@@ -29,7 +29,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "contentful": "^8.3.5",
     "dayjs": "^1.10.5",
-    "next": "10.2.0",
+    "next": "11.0.1",
     "next-seo": "^4.24.0",
     "next-themes": "^0.0.14",
     "nightwind": "^1.1.12",
@@ -64,6 +64,6 @@
     "jest-watch-typeahead": "^0.6.3",
     "lint-staged": "^11.0.0",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
+    "typescript": "4.3.2"
   }
 }

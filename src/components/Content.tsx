@@ -4,7 +4,7 @@ import ContentfulRichText from "@components/Shared/ContentfulRichText";
 
 const Content = ({ title, hideTitle, alignment = "left", body, asset }) => {
   let content;
-
+  console.log(title, body);
   if (asset)
     content = (
       <img

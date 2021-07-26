@@ -3,15 +3,9 @@ import React from "react";
 import Content from "@components/Content";
 import NotFound from "@components/Shared/NotFound";
 
-const Page = ({
-  name,
-  title: pageTitle,
-  content,
-  showTitle = true,
-  children,
-}) => {
+const Page = ({ name, title: pageTitle, content, showTitle = true }) => {
   if (name === "404") return <NotFound />;
-  console.log(content);
+
   return (
     <div>
       <div className="prose-sm prose lg:prose-lg max-w-none">
@@ -20,7 +14,6 @@ const Page = ({
           <Content key={c.title} {...c} />
         ))}
       </div>
-      {children}
     </div>
   );
 };
