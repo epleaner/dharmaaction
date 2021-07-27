@@ -1,14 +1,19 @@
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { INLINES } from "@contentful/rich-text-types";
+import Link from "next/link";
 
 const ContentfulRichText = ({ json }) => {
-  return (
-    <div
-      // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{
-        __html: documentToHtmlString(json),
-      }}
-    />
-  );
+  const options = {
+    renderNode: {
+      [INLINES.HYPERLINK]: ({ content, data }) => (
+        <Link href={data.uri}>
+          <a>{content[0].value}</a>
+        </Link>
+      ),
+    },
+  };
+
+  return documentToReactComponents(json, options);
 };
 
 export default ContentfulRichText;

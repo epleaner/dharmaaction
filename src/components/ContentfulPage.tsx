@@ -1,6 +1,6 @@
 import React from "react";
 
-import Content from "@components/Content";
+import Content from "@components/Shared/Content";
 import NotFound from "@components/Shared/NotFound";
 
 const Page = ({ name, title: pageTitle, content, showTitle = true }) => {

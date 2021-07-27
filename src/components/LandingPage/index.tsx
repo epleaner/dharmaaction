@@ -1,9 +1,10 @@
-import Content from "@components/Content";
-import LinkSection from "@components/Shared/LinkSection";
+import HomeSection from "@components/LandingPage/HomeSection";
 
 const index = ({ content }) => {
   const { title } = content[0];
-  const about = content.filter((c) => c.title === "About")[0];
+  console.log(content);
+  const about = content.filter((c) => c.title === "About DANCE")[0];
+  const localGroups = content.filter((c) => c.title === "Local Groups")[0];
 
   return (
     <div>
@@ -11,15 +12,8 @@ const index = ({ content }) => {
         <h1>{title}</h1>
       </div>
       <div>
-        <LinkSection href="/about" title="About" order={0}>
-          <Content key={about.title} {...about} />
-        </LinkSection>
-        <LinkSection href="/about" title="Projects" order={1}>
-          <Content key={about.title} {...about} />
-        </LinkSection>
-        <LinkSection href="/about" title="Local Groups" order={2}>
-          <Content key={about.title} {...about} />
-        </LinkSection>
+        <HomeSection order={0} content={about} />
+        <HomeSection content={localGroups} order={1} />
       </div>
     </div>
   );

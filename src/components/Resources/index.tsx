@@ -1,4 +1,4 @@
-import Content from "@components/Content";
+import Content from "@components/Shared/Content";
 
 const Resources = ({ content }) => {
   return (

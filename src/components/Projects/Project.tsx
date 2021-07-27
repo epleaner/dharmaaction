@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Content from "@components/Content";
+import Content from "@components/Shared/Content";
 
 const Project = (props) => {
   return (
