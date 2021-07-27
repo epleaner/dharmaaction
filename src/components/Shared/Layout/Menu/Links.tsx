@@ -3,7 +3,14 @@ import NavItem from "@components/Shared/Layout/Menu/NavItem";
 const Links = () => {
   return (
     <>
-      <NavItem href="/about" label="About" />
+      <NavItem
+        href="/about"
+        label="About"
+        menuItems={[
+          { label: "History", href: "/about/history" },
+          { label: "History", href: "/about/history" },
+        ]}
+      />
       <NavItem href="/projects" label="Projects" />
       <NavItem href="/events" label="Events" />
       <NavItem href="/local-groups" label="Local Groups" />
