@@ -13,7 +13,7 @@ const ContentfulRichText = ({ json }) => {
     },
   };
 
-  return documentToReactComponents(json, options);
+  return documentToReactComponents(json, options) as JSX.Element;
 };
 
 export default ContentfulRichText;
