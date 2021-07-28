@@ -8,7 +8,7 @@ const Menu = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const links = (
-    <ul className="absolute flex flex-col items-end w-screen h-screen px-10 bg-gray-50 dark:bg-gray-600 lg:px-0 lg:flex-row lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:dark:bg-transparent">
+    <ul className="absolute z-10 flex flex-col items-end w-screen h-screen px-10 bg-gray-50 dark:bg-gray-600 lg:px-0 lg:flex-row lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:dark:bg-transparent">
       <Links />
     </ul>
   );

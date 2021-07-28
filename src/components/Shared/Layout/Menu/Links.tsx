@@ -7,8 +7,13 @@ const Links = () => {
         href="/about"
         label="About"
         menuItems={[
-          { label: "History", href: "/about/history" },
-          { label: "History", href: "/about/history" },
+          { label: "Mission", href: "/about#mission" },
+          { label: "History", href: "/about#history" },
+          { label: "Eco-Dharma", href: "/about#eco-dharma" },
+          {
+            label: "Tribute to Rob Burbea",
+            href: "/about/tribute-to-rob-burbea",
+          },
         ]}
       />
       <NavItem href="/projects" label="Projects" />
