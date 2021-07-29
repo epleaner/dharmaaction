@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ContentfulPage from "@components/ContentfulPage";
+import ContentfulPage from "@components/Shared/ContentfulPage";
 
 const LocalGroup = (props) => {
   return (
