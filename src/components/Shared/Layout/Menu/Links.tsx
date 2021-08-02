@@ -16,9 +16,22 @@ const Links = () => {
           },
         ]}
       />
+      <NavItem
+        href="/local-groups"
+        label="Local Groups"
+        menuItems={[
+          {
+            label: "Find a group",
+            href: "/local-groups#finding-a-local-group",
+          },
+          {
+            label: "Start a group",
+            href: "/local-groups#starting-a-local-group",
+          },
+        ]}
+      />
       <NavItem href="/projects" label="Projects" />
       <NavItem href="/events" label="Events" />
-      <NavItem href="/local-groups" label="Local Groups" />
       <NavItem href="/resources" label="Resources" />
       <NavItem href="/contact" label="Contact" />
       <NavItem href="/mailing-list" label="Mailing List" />

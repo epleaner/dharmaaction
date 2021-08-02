@@ -1,12 +1,13 @@
-import Content from "@components/Shared/Content";
+import Resource from "@components/Resources/Resource";
 
-const Resources = ({ content }) => {
+const Resources = ({ page: { title, resourceTypes } }) => {
+  console.log(title, resourceTypes);
   return (
     <div className="grid prose">
       <section className="">
-        <h1>Resources</h1>
-        {content.map((c) => (
-          <Content key={c.title} {...c} />
+        <h1>{title}</h1>
+        {resourceTypes.items.map((r) => (
+          <Resource key={r.title} {...r} />
         ))}
       </section>
     </div>

@@ -8,7 +8,7 @@ export default function ResourcesPage({ page }) {
 }
 
 export async function getStaticProps() {
-  const { page } = await ContentfulApi.getPage("Resources");
+  const page = await ContentfulApi.getResources();
 
   console.log(page);
   return {

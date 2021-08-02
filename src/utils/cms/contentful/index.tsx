@@ -1,7 +1,5 @@
 import dayjs from "dayjs";
 
-import stringUtils from "@utils/string";
-
 export default class ContentfulApi {
   static async gql(query: string) {
     const url = `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`;
@@ -123,39 +121,49 @@ export default class ContentfulApi {
     }
   }
 
-  static async getEvent({ title }) {
+  static async getResources() {
     try {
-      const titleCased = stringUtils.toTitle(title);
-
-      const { eventCollection } = await this.gql(`
+      const response = await this.gql(`
       {
-        eventCollection(where: {title_contains: "${titleCased}"}) {
-          items {
-            title
-            startDate
-            endDate
-            subHeading
-            location
-            body {
-              json
-            }
-            imagesCollection {
-              items {
+        page(id: "13qDVbw8AXFCEr7aRNrcAc") {
+          title
+          resourceTypes: contentCollection(limit: 5) {
+            items {
+              ... on ContentSection {
                 title
-                description
-                url
-                width
-                height
+                hideTitle
+                alignment
+                body {
+                  links {
+                    entries {
+                      block {
+                        ... on ContentSection {
+                          title
+                          body {
+                            json
+                            links {
+                              assets {
+                                block {
+                                  title
+                                  url
+                                  contentType
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
       `);
-
-      const event = eventCollection.items[0];
-
-      return { event };
+      console.log(response);
+      return response;
     } catch (e) {
       console.log(e);
       return { event: null };

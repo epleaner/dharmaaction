@@ -5,8 +5,8 @@ import Link from "next/link";
 const ContentfulRichText = ({ json }) => {
   const options = {
     renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (q) => {
-        console.log(q);
+      [BLOCKS.EMBEDDED_ASSET]: ({ data }) => {
+        if (data.target.sys.type === "Link") return null;
         return <span>img</span>;
       },
       [INLINES.HYPERLINK]: ({ content, data }) => (
