@@ -121,6 +121,45 @@ export default class ContentfulApi {
     }
   }
 
+  static async getEvent({ title }) {
+    try {
+      const titleCased = stringUtils.toTitle(title);
+
+      const { eventCollection } = await this.gql(`
+      {
+        eventCollection(where: {title_contains: "${titleCased}"}) {
+          items {
+            title
+            startDate
+            endDate
+            subHeading
+            location
+            body {
+              json
+            }
+            imagesCollection {
+              items {
+                title
+                description
+                url
+                width
+                height
+              }
+            }
+          }
+        }
+      }
+      `);
+
+      const event = eventCollection.items[0];
+
+      return { event };
+    } catch (e) {
+      console.log(e);
+      return { event: null };
+    }
+  }
+
   static async getResources() {
     try {
       const response = await this.gql(`
