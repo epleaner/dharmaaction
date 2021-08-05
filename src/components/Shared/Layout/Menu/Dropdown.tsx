@@ -4,8 +4,8 @@ export default function Dropdown({ label, href, menuItems }) {
   return (
     <div className="relative flex flex-col items-end lg:block group">
       <ActiveLink {...{ label, href }} />
-      <div className="absolute left-0 hidden w-48 origin-top-right lg:group-hover:block">
-        <div className="w-full px-4 py-2 mt-4 rounded-md shadow-lg bg-gray-50 dark:bg-gray-600 ring-1 ring-black ring-opacity-5 focus:outline-none">
+      <div className="absolute left-0 hidden w-48 lg:group-hover:block">
+        <div className="px-4 py-2 mt-4 rounded-md shadow-lg bg-gray-50 dark:bg-gray-600 ring-1 ring-black ring-opacity-5 focus:outline-none">
           {menuItems.map((item) => {
             return (
               <ActiveLink

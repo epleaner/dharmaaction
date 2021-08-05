@@ -6,7 +6,7 @@ const Content = ({ title, hideTitle, alignment = "left", body, asset }) => {
   let content;
   let blocks;
 
-  if (body.links) {
+  if (body?.links) {
     blocks = body.links.assets.block.map(({ contentType, url }) => {
       if (contentType === "application/pdf")
         return (

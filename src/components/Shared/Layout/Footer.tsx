@@ -14,17 +14,7 @@ const Footer = () => {
         © 2021 Dharma Action Network for Climate Engagement
       </div>
       <div className="text-xs prose">
-        <div className="mb-2">
-          Website by <a href="https://elipleaner.com">Eli Pleaner</a>
-        </div>
-        Logo by{" "}
-        <a href="https://www.freepik.com" title="Freepik">
-          Freepik
-        </a>{" "}
-        from{" "}
-        <a href="https://www.flaticon.com/" title="Flaticon">
-          www.flaticon.com
-        </a>
+        Website by <a href="https://elipleaner.com">Eli Pleaner</a>
       </div>
     </footer>
   );

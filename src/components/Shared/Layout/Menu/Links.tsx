@@ -30,9 +30,30 @@ const Links = () => {
           },
         ]}
       />
+      <NavItem
+        href="/resources"
+        label="Eco-Dharma Resources"
+        menuItems={[
+          {
+            label: "Articles + Talks",
+            href: "/resources/articles-talks",
+          },
+          {
+            label: "Books",
+            href: "/resources/books",
+          },
+          {
+            label: "Networks",
+            href: "/resources/networks",
+          },
+          {
+            label: "Divestment Links",
+            href: "/resources/divestment",
+          },
+        ]}
+      />
       <NavItem href="/projects" label="Projects" />
       <NavItem href="/events" label="Events" />
-      <NavItem href="/resources" label="Resources" />
       <NavItem href="/contact" label="Contact" />
       <NavItem href="/mailing-list" label="Mailing List" />
     </>
