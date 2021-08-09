@@ -1,15 +1,17 @@
-import Resource from "@components/Resources/Resource";
+import ResourceCard from "@components/Resources/ResourceCard";
 
 const Resources = ({ page: { title, resourceTypes } }) => {
   console.log(title, resourceTypes);
   return (
-    <div className="grid prose">
-      <section className="">
+    <div className="w-full">
+      <div className="mb-10 prose">
         <h1>{title}</h1>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-10 mb-10 md:grid-cols-2">
         {resourceTypes.items.map((r) => (
-          <Resource key={r.title} {...r} />
+          <ResourceCard key={r.title} {...r} />
         ))}
-      </section>
+      </div>
     </div>
   );
 };

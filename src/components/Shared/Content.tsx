@@ -2,7 +2,13 @@ import React from "react";
 
 import ContentfulRichText from "@components/Shared/ContentfulRichText";
 
-const Content = ({ title, hideTitle, alignment = "left", body, asset }) => {
+const Content = ({
+  title = "",
+  hideTitle = false,
+  alignment = "left",
+  body,
+  asset = null,
+}) => {
   let content;
   let blocks;
 

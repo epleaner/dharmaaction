@@ -175,6 +175,7 @@ export default class ContentfulApi {
                 hideTitle
                 alignment
                 body {
+                  json
                   links {
                     entries {
                       block {
@@ -203,8 +204,28 @@ export default class ContentfulApi {
         }
       }
       `);
-      console.log(response);
+
       return response;
+    } catch (e) {
+      console.log(e);
+      return { event: null };
+    }
+  }
+
+  static async getResource({ name }) {
+    try {
+      console.log(name);
+      const {
+        page: {
+          resourceTypes: { items },
+        },
+      } = await this.getResources();
+
+      const resource = items
+        .filter(({ title }) => stringUtils.toUrl(title) === name)
+        .pop();
+
+      return { resource };
     } catch (e) {
       console.log(e);
       return { event: null };

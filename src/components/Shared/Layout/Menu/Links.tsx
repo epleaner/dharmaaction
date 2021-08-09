@@ -32,7 +32,7 @@ const Links = () => {
       />
       <NavItem
         href="/resources"
-        label="Eco-Dharma Resources"
+        label="Resources"
         menuItems={[
           {
             label: "Articles + Talks",
