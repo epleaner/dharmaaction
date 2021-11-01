@@ -11,7 +11,7 @@ import SEO from "@seo/next-seo.config";
 import "@styles/tailwind.scss";
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  console.log(Component.name);
+  console.log(Component.name, Component);
   return (
     <>
       <DefaultSeo {...SEO} />
