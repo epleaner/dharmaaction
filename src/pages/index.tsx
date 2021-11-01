@@ -3,11 +3,11 @@ import React from "react";
 import LandingPage from "@components/LandingPage";
 import ContentfulApi from "@utils/cms/contentful";
 
-export default function Home({ page }) {
+const Home = ({ page }) => {
   const { title, name, content } = page;
 
   return <LandingPage {...{ title, name, content }} />;
-}
+};
 
 export async function getStaticProps() {
   const { page } = await ContentfulApi.getPage("Home Page");
@@ -18,3 +18,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Home;
