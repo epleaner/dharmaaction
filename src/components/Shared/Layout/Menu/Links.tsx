@@ -36,7 +36,7 @@ const Links = () => {
         menuItems={[
           {
             label: "Articles + Talks",
-            href: "/resources/articles-talks",
+            href: "/resources/articles-and-talks-on-eco-dharma",
           },
           {
             label: "Books",
@@ -48,7 +48,11 @@ const Links = () => {
           },
           {
             label: "Divestment Links",
-            href: "/resources/divestment",
+            href: "/resources/divestment-links",
+          },
+          {
+            label: '"Our Sacred Earth" Meditation Dance',
+            href: "/resources/-our-sacred-earth-meditation-dance",
           },
         ]}
       />
